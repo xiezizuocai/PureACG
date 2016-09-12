@@ -10,6 +10,15 @@
     动漫歌曲排行榜数据来源：网易云音乐ACG音乐榜（每周四更新）
 
 
+截图：
+
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/1.png)  
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/2.png)  
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/3.png)  
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)  
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/5.png)  
+![image](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/6.png)  
+
 
 
 关于：
