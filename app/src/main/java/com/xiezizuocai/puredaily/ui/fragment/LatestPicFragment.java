@@ -32,10 +32,7 @@ import org.xutils.view.annotation.ViewInject;
 import java.util.ArrayList;
 
 
-/**
- * 最新日报Fragment
- * Created by hanjie on 2016/5/31.
- */
+
 @ContentView(R.layout.fragment_latest_pic)
 public class LatestPicFragment extends BaseFragment {
 

@@ -17,9 +17,7 @@ import com.xiezizuocai.puredaily.entity.Wallpaper;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by gaohailong on 2016/5/17.
- */
+
 public class LatestPicAdapter extends BaseAdapter<LatestPicAdapter.MyViewHolder>  {
 
     private List<Integer> mHeights;

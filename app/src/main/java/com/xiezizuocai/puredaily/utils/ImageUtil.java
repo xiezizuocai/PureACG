@@ -13,9 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/**
- * Created by gaohailong on 2016/5/20.
- */
+
 public class ImageUtil {
     public static Uri saveImage(Context context, String url, Bitmap bitmap,ImageView imageView,String tag){
         //壁纸保存路径

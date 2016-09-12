@@ -9,11 +9,7 @@ import org.xutils.x;
 
 import java.util.ArrayList;
 
-/**
- * 数据请求
- * <p>
- * Created by hanjie on 2016/5/31.
- */
+
 public class Request {
 
     public interface RequestCallback {

@@ -11,9 +11,7 @@ import android.webkit.WebView;
 
 import java.io.File;
 
-/**
- * Created by gaohailong on 2016/5/19.
- */
+
 public class ShareUtil {
     public static void shareText(Context context,String text){
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -31,7 +29,7 @@ public class ShareUtil {
         //Uri uri = Uri.fromFile(image);//图片路径
 
         intent.putExtra(Intent.EXTRA_STREAM, uri);
-        context.startActivity(Intent.createChooser(intent,"分享妹纸"));
+        context.startActivity(Intent.createChooser(intent,"分享壁纸"));
     }
 
     public static void copyToClipboard(Context context, String url, WebView webView){

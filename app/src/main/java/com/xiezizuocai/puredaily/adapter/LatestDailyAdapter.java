@@ -18,11 +18,7 @@ import com.xiezizuocai.puredaily.entity.LatestInfo;
 
 import java.util.ArrayList;
 
-/**
- * 最新日报适配器
- * <p/>
- * Created by hanjie on 2016/5/31.
- */
+
 public class LatestDailyAdapter extends BaseAdapter<LatestDailyAdapter.MyViewHolder> {
 
     private ArrayList<LatestInfo> mLatests;

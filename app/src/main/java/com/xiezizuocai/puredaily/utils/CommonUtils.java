@@ -19,11 +19,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * CommonUtils
- * <p/>
- * Created by hanjie on 2016/6/2.
- */
 public class CommonUtils {
 
     // 重启APP
@@ -133,7 +128,7 @@ public class CommonUtils {
         }
     }
 
-    // 格式化日报结果日期
+    // 格式化 结果日期
     public static String formatResultDate(String resultDate) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         try {
@@ -147,7 +142,7 @@ public class CommonUtils {
         return null;
     }
 
-    // 格式化历史日报结果日期
+    // 格式化 结果日期
     public static String formatDateForHistory(int year, int monthOfYear, int dayOfMonth) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, monthOfYear, dayOfMonth);

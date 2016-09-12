@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 
 import org.xutils.x;
 
-/**
- * Created by hanjie on 2016/5/31.
- */
+
 public class BaseFragment extends Fragment {
 
     private boolean injected = false;
