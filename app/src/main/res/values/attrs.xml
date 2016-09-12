@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ****************************** 自定义属性 ************************************* -->
+
+<resources>
+
+    <declare-styleable name="CustomView">
+        <attr name="pure_title" format="string|reference"/>      <!-- 格式：字符串/引用（参考某一资源ID ） -->
+        <attr name="pure_icon" format="reference"/>              <!-- 格式：引用（参考某一资源ID ） -->
+        <attr name="pure_off" format="string|reference" />       <!-- 格式：字符串/引用（参考某一资源ID ） -->
+        <attr name="pure_on" format="string|reference" />        <!-- 格式：字符串/引用（参考某一资源ID ） -->
+        <attr name="pure_bottomLine" format="boolean" />         <!-- 格式：布尔值 -->
+    </declare-styleable>
+
+
+</resources>

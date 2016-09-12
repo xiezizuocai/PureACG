@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.xiezizuocai.puredaily"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 3
+        versionName "0.7.6"
+        resConfigs "zh-rCN"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'org.xutils:xutils:3.3.34'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.wang.avi:library:1.0.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.wdullaer:materialdatetimepicker:2.3.0'
+    compile files('libs/library-1.0.5-sources.jar')
+    compile files('libs/photoview-library-1.2.2.jar')
+    compile ':easyrecyclerview-3.5.7@aar'
+    compile 'com.jude:rollviewpager:1.4.5'
+    compile files('libs/gradle-wrapper.jar')
+}

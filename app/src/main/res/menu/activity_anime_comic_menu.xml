@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_bilibili"
+        android:orderInCategory="100"
+        android:title="Bilibili"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_acfun"
+        android:orderInCategory="100"
+        android:title="AcFun"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_tencent"
+        android:orderInCategory="100"
+        android:title="腾讯动漫"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_u17"
+        android:orderInCategory="100"
+        android:title="有妖气"
+        app:showAsAction="never" />
+</menu>

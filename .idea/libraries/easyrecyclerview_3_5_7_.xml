@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="easyrecyclerview-3.5.7-">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/easyrecyclerview-3.5.7/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/easyrecyclerview-3.5.7/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/easyrecyclerview-3.5.7/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
