@@ -13,17 +13,25 @@
 ##应用截图
 
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/1.png)
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/3.png)  
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)  
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/5.png)  
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/6.png)  
+
+![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/3.png)
+
+![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)   
+
+![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/5.png)
+
+![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/6.png)
 
 
 ##感谢
 com.android.support:design:23.3.0
+
 org.xutils:xutils:3.3.34
+
 com.github.bumptech.glide:glide:3.7.0
+
 com.wang.avi:library:1.0.5
+
 photoview-library-1.2.2
 
 ##声明
