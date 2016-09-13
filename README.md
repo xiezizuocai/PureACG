@@ -1,19 +1,18 @@
 # PureACG
 
-##¼ò½é£º
-    PureACGÊÇÒ»¸öÄÜ¹»Ìá¹©¶¯Âþ×ÊÑ¶¡¢ÐÂ·¬Á¬ÔØÐÅÏ¢¡¢¸ßÇå¶¯Âþ±ÚÖ½ÏÂÔØÒÔ¼°¶¯Âþ¸èÇúÅÅÐÐ°ñµÄAndroidÓ¦ÓÃ¿Í»§¶Ë¡£
+##ï¿½ï¿½é£º
+    PureACGï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½å¶¯ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½AndroidÓ¦ï¿½Ã¿Í»ï¿½ï¿½Ë¡ï¿½
 
-    ¶¯Âþ×ÊÑ¶Êý¾ÝÀ´Ô´£º¶¯ÂþÐÇ¿Õ£¨Ã¿ÈÕ¸üÐÂ£©
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿Õ£ï¿½Ã¿ï¿½Õ¸ï¿½ï¿½Â£ï¿½
 
-    ÐÂ·¬Á¬ÔØÊý¾ÝÀ´Ô´£ºBilibili¡¢AcFun¡¢ÌÚÑ¶Âþ»­¡¢ÓÐÑýÆøÂþ»­£¨Ã¿ÈÕ¸üÐÂ£©
+    ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½Bilibiliï¿½ï¿½AcFunï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½Õ¸ï¿½ï¿½Â£ï¿½
 
-    ¶¯Âþ¸èÇúÅÅÐÐ°ñÊý¾ÝÀ´Ô´£ºÍøÒ×ÔÆÒôÀÖACGÒôÀÖ°ñ£¨Ã¿ÖÜËÄ¸üÐÂ£©
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ACGï¿½ï¿½ï¿½Ö°ï¿½Ã¿ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Â£ï¿½
 
 
-##½ØÍ¼£º
+##ï¿½ï¿½Í¼ï¿½ï¿½
 
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/1.png)  
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/2.png)  
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/3.png)  
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)  
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/5.png)  
@@ -21,13 +20,13 @@
 
 
 
-##¹ØÓÚ£º
+##ï¿½ï¿½ï¿½Ú£ï¿½
      
-1.Ó¦ÓÃËùÓÐÍ¼Æ¬×ÊÔ´¾ùÀ´×ÔÍøÂç£¬ÇÖÉ¾¡£
+1.Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½É¾ï¿½ï¿½
 
-2.Ñ§Ï°Ö®×÷£¬·ÇÉÌÓÃ¡£
+2.Ñ§Ï°Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½
 
 
 
-´ý²¹³ä...
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
 
