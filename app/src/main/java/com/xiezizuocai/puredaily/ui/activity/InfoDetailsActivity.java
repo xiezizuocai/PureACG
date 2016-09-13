@@ -22,7 +22,7 @@ import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
-@ContentView(R.layout.activity_latest_details)
+@ContentView(R.layout.activity_latest_info_details)
 public class InfoDetailsActivity extends BaseActivity implements NestedScrollView.OnScrollChangeListener{
 
     @ViewInject(R.id.toolbar)
@@ -117,7 +117,7 @@ public class InfoDetailsActivity extends BaseActivity implements NestedScrollVie
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_latest_details_menu,menu);
+        getMenuInflater().inflate(R.menu.activity_info_details_menu,menu);
         return true;
     }
 

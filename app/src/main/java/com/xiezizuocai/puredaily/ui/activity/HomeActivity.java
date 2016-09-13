@@ -2,6 +2,7 @@ package com.xiezizuocai.puredaily.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -58,14 +59,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private void initNavView() {
         // 初始化抽屉Header ImageView
         mNavHeaderImgView = (ImageView) mNavigationView.getHeaderView(0).findViewById(R.id.iv_header);
-
-        // Day/Night
-        if (CommonUtils.nowIsDay(this)) {
-            mNavHeaderImgView.setImageResource(R.drawable.img_header);
-        } else {
-            mNavHeaderImgView.setImageResource(R.drawable.img_header_night);
-        }
-
+        mNavHeaderImgView.setImageResource(R.drawable.img_header);
     }
 
 
@@ -147,22 +141,19 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 break;
             }
 
-
-            // 主题皮肤
-            case R.id.nav_skin: {
-
-                break;
-            }
-            // 关于
-            case R.id.nav_about: {
-
-                break;
-            }
             // 设置
             case R.id.nav_settings: {
-
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                Snackbar.make(mDrawerLayout,"暂无 . . .",Snackbar.LENGTH_SHORT).show();
                 break;
             }
+
+            // 关于
+            case R.id.nav_about: {
+                AboutActivity.startAboutActivity(this);
+                break;
+            }
+
         }
         return false;
     }

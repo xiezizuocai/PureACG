@@ -3,6 +3,7 @@ package com.xiezizuocai.puredaily.ui.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -129,9 +130,9 @@ public class LatestPicFragment extends BaseFragment {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (newState ==RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 ==mAdapter.getItemCount()) {
+                if (newState ==RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 >= mAdapter.getItemCount()) {
+                    Snackbar.make(recyclerView,"    壁纸正在加载中 . . . ",Snackbar.LENGTH_SHORT).show();
                     fetchLatestPicData(); // 获取最新数据
-
                 }
             }
             @Override

@@ -25,9 +25,6 @@ public class ShareUtil {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("image/jpeg");//图片
 
-        //File image = new File(Environment.getExternalStorageDirectory().getPath()+"/DCIM/Screenshots/lock_wallpaper.jpg");
-        //Uri uri = Uri.fromFile(image);//图片路径
-
         intent.putExtra(Intent.EXTRA_STREAM, uri);
         context.startActivity(Intent.createChooser(intent,"分享壁纸"));
     }

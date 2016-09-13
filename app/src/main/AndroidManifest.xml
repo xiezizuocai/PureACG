@@ -35,6 +35,10 @@
             android:name=".ui.activity.PicDetailsActivity" >
         </activity>
 
+        <activity
+            android:name=".ui.activity.AboutActivity">
+        </activity>
+
     </application>
 
 </manifest>

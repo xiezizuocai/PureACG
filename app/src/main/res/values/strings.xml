@@ -31,4 +31,19 @@
     <string name="short_line">-</string>
     <string name="song_info">出自：</string>
 
+    <string name="activity_about_version_info">当前版本: 1.0</string>
+
+    <string name="version_change_log">1.0： 初版</string>
+    <string name="change_log">更新日志</string>
+
+    <string name="str_contact_weibo">蝎子做菜</string>
+
+    <string name="activity_about_class_statement">声明</string>
+    <string name="app_statement">    PureACG是一个能够提供动漫资讯、新番连载信息、高清动漫壁纸下载以及动漫歌曲排行榜的Android应用客户端。\n▪  动漫资讯数据来源：动漫星空（每日更新）\n▪  新番连载数据来源：Bilibili、AcFun、腾讯漫画、有妖气漫画（每日更新）\n▪  动漫歌曲排行榜数据来源：网易云音乐ACG音乐榜（每周四更新）</string>
+
+    <string name="activity_about_class_contact">联系我</string>
+
+    <string name="activity_about_class_thanks">感谢以下开源项目</string>
+    <string name="thanks_list">▪  com.android.support:design:23.3.0\n\n▪  org.xutils:xutils:3.3.34\n\n▪  com.github.bumptech.glide:glide:3.7.0\n\n▪  com.wang.avi:library:1.0.5\n\n▪  photoview-library-1.2.2 </string>
+
 </resources>

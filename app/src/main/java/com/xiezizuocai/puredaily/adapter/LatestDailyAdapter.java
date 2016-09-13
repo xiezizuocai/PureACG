@@ -14,7 +14,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.xiezizuocai.puredaily.R;
 import com.xiezizuocai.puredaily.entity.LatestInfo;
 
-
 import java.util.ArrayList;
 
 
@@ -57,7 +56,7 @@ public class LatestDailyAdapter extends BaseAdapter<LatestDailyAdapter.MyViewHol
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.item_latest_daily, parent, false);
+        View view = inflater.inflate(R.layout.item_latest_info, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -74,9 +73,9 @@ public class LatestDailyAdapter extends BaseAdapter<LatestDailyAdapter.MyViewHol
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.latest_daily_image);
-            title = (TextView) itemView.findViewById(R.id.latest_daily_title);
-            time = (TextView) itemView.findViewById(R.id.latest_daily_time);
+            image = (ImageView) itemView.findViewById(R.id.latest_info_image);
+            title = (TextView) itemView.findViewById(R.id.latest_info_title);
+            time = (TextView) itemView.findViewById(R.id.latest_info_time);
         }
 
     }

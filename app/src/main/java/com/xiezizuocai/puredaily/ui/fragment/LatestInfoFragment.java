@@ -29,7 +29,7 @@ import org.xutils.view.annotation.ViewInject;
 import java.util.ArrayList;
 
 
-@ContentView(R.layout.fragment_latest_daily)
+@ContentView(R.layout.fragment_latest_info)
 public class LatestInfoFragment extends BaseFragment {
 
     @ViewInject(R.id.recycler_view)
