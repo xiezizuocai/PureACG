@@ -2,7 +2,6 @@ package com.xiezizuocai.puredaily.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,39 +14,31 @@ import com.xiezizuocai.puredaily.R;
 import com.xiezizuocai.puredaily.entity.Wallpaper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class LatestPicAdapter extends BaseAdapter<LatestPicAdapter.MyViewHolder>  {
 
-    private List<Integer> mHeights;
-
-    private ArrayList<Wallpaper> mLatests;
+    private ArrayList<Wallpaper> mWallpapers;
     private Context mContext;
 
-    public LatestPicAdapter(Context context, ArrayList<Wallpaper> latests) {
+    public LatestPicAdapter(Context context, ArrayList<Wallpaper> wallpapers) {
         this.mContext = context;
-        mLatests = latests;
+        mWallpapers = wallpapers;
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         super.onBindViewHolder(holder, position);
 
-        Wallpaper latestGanHuo = mLatests.get(position);
-        String imageUrl = latestGanHuo.getUrl();
+        Wallpaper wallpaper = mWallpapers.get(position);
+        String imageUrl = wallpaper.getUrl();
 
-        // 有图模式
-        if (!TextUtils.isEmpty(imageUrl)) {
-            Glide.with(mContext)
-                    .load(imageUrl)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .crossFade()
-                    .into(holder.image);
+        Glide.with(mContext)
+                .load(imageUrl)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .crossFade()
+                .into(holder.image);
 
-        } else {
-            holder.image.setImageDrawable(null);
-        }
         holder.image.setVisibility(View.VISIBLE);
 
         // 开启动画
@@ -55,8 +46,8 @@ public class LatestPicAdapter extends BaseAdapter<LatestPicAdapter.MyViewHolder>
 
     }
 
-    public void syncData(ArrayList<Wallpaper> latests) {
-        this.mLatests = latests;
+    public void syncData(ArrayList<Wallpaper> wallpapers) {
+        this.mWallpapers = wallpapers;
     }
 
     @Override
@@ -68,7 +59,7 @@ public class LatestPicAdapter extends BaseAdapter<LatestPicAdapter.MyViewHolder>
 
     @Override
     public int getItemCount() {
-        return mLatests.size();
+        return mWallpapers.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

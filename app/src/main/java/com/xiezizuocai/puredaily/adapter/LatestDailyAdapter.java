@@ -2,7 +2,6 @@ package com.xiezizuocai.puredaily.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,46 +20,38 @@ import java.util.ArrayList;
 
 public class LatestDailyAdapter extends BaseAdapter<LatestDailyAdapter.MyViewHolder> {
 
-    private ArrayList<LatestInfo> mLatests;
+    private ArrayList<LatestInfo> mLatestInfos;
     private Context mContext;
 
-    public LatestDailyAdapter(Context context, ArrayList<LatestInfo> latests) {
+    public LatestDailyAdapter(Context context, ArrayList<LatestInfo> latestInfos) {
         this.mContext = context;
-        mLatests = latests;
+        mLatestInfos = latestInfos;
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         super.onBindViewHolder(holder, position);
-        LatestInfo latest = mLatests.get(position);
-        String imageUrl = latest.getCover();
-        String title = latest.getTitle();
-        String time = latest.getTime();
+        LatestInfo latestInfo = mLatestInfos.get(position);
+        String imageUrl = latestInfo.getCover();
+        String title = latestInfo.getTitle();
+        String time = latestInfo.getTime();
 
-        // 有图模式
-        if (!TextUtils.isEmpty(imageUrl)) {
-            Glide.with(mContext)
-                    .load(imageUrl)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .crossFade()
-                    .into(holder.image);
-        } else {
-            holder.image.setImageDrawable(null);
-        }
-
+        Glide.with(mContext)
+                .load(imageUrl)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .crossFade()
+                .into(holder.image);
 
         holder.image.setVisibility(View.VISIBLE);
-
         holder.title.setText(title);
-
         holder.time.setText(time);
 
         // 开启动画
         setAnimation(holder.itemView);
     }
 
-    public void syncData(ArrayList<LatestInfo> latests) {
-        this.mLatests = latests;
+    public void syncData(ArrayList<LatestInfo> latestInfos) {
+        this.mLatestInfos = latestInfos;
     }
 
     @Override
@@ -72,7 +63,7 @@ public class LatestDailyAdapter extends BaseAdapter<LatestDailyAdapter.MyViewHol
 
     @Override
     public int getItemCount() {
-        return mLatests.size();
+        return mLatestInfos.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

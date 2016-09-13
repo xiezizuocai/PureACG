@@ -18,14 +18,13 @@ public class FetchLatestPicTask {
     private static final long CACHE_MAX_AGE = 86400000L * 7;
 
     public interface FetchLatestPicCallback {
-        void onSuccess(ArrayList<Wallpaper> latests);
-
+        void onSuccess(ArrayList<Wallpaper> wallpapers);
         void onError(String errorMsg);
     }
 
     // 获取最新的数据
-    public static void fetch(int pages,final FetchLatestPicCallback fetchCallback) {
-        Request.requestUrl(API.LATEST_PIC + pages, CACHE_MAX_AGE, false, new Request.RequestCallback() {
+    public static void fetch(final FetchLatestPicCallback fetchCallback) {
+        Request.requestUrl(API.LATEST_PIC, CACHE_MAX_AGE, false, new Request.RequestCallback() {
             @Override
             public void onSuccess(String result) {
                 parseLatestResult(result, fetchCallback);
@@ -57,9 +56,9 @@ public class FetchLatestPicTask {
             }
 
             @Override
-            protected void onPostExecute(ArrayList<Wallpaper> latests) {
-                if (latests != null) {
-                    fetchCallback.onSuccess(latests);
+            protected void onPostExecute(ArrayList<Wallpaper> wallpapers) {
+                if (wallpapers != null) {
+                    fetchCallback.onSuccess(wallpapers);
                 } else if (this.errorMsg != null) {
                     fetchCallback.onError(this.errorMsg);
                 }

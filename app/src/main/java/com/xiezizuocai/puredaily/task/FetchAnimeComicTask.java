@@ -22,8 +22,7 @@ public class FetchAnimeComicTask {
     public static final int TYPE_U17 = 4;
 
     public interface FetchAmimeComicCallback {
-        void onSuccess(int UrlType,ArrayList<AnimeComic> latests);
-
+        void onSuccess(int UrlType,ArrayList<AnimeComic> animeComics);
         void onError(String errorMsg);
     }
 
@@ -41,7 +40,6 @@ public class FetchAnimeComicTask {
         } else if(UrlType == TYPE_U17) {
             anime_comic_api = API.LATEST_U17_COMIC;
         }
-
 
         Request.requestUrl(anime_comic_api, CACHE_MAX_AGE, false, new Request.RequestCallback() {
             @Override
@@ -76,9 +74,9 @@ public class FetchAnimeComicTask {
             }
 
             @Override
-            protected void onPostExecute(ArrayList<AnimeComic> latests) {
-                if (latests != null) {
-                    fetchCallback.onSuccess(UrlType,latests);
+            protected void onPostExecute(ArrayList<AnimeComic> animeComics) {
+                if (animeComics != null) {
+                    fetchCallback.onSuccess(UrlType,animeComics);
                 } else if (this.errorMsg != null) {
                     fetchCallback.onError(this.errorMsg);
                 }

@@ -2,19 +2,16 @@ package com.xiezizuocai.puredaily.ui.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 import com.xiezizuocai.puredaily.R;
 import com.xiezizuocai.puredaily.adapter.BaseAdapter;
@@ -32,7 +29,6 @@ import org.xutils.view.annotation.ViewInject;
 import java.util.ArrayList;
 
 
-
 @ContentView(R.layout.fragment_latest_pic)
 public class LatestPicFragment extends BaseFragment {
 
@@ -46,9 +42,7 @@ public class LatestPicFragment extends BaseFragment {
 
     private LatestPicAdapter mAdapter;
 
-    private ArrayList<Wallpaper> mLatests;
-
-    public int pages = 2;
+    private ArrayList<Wallpaper> mWallpapers;
 
     private int lastVisibleItem = 0;
 
@@ -71,7 +65,7 @@ public class LatestPicFragment extends BaseFragment {
         ((HomeActivity) getActivity()).setToolbarTitle(R.string.fragment_title_latest_pic);  // 设置HomeActivity工具栏标题
         View view = super.onCreateView(inflater, container, savedInstanceState);
         initSwipe();  // 初始化下拉刷新组件
-        fetchLatestData(1);  // 获取最新数据
+        fetchLatestPicData();  // 获取最新数据
         return view;
     }
 
@@ -79,22 +73,19 @@ public class LatestPicFragment extends BaseFragment {
         mSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                fetchLatestData(1);  // 获取最新数据
+                fetchLatestPicData();  // 获取最新数据
             }
         });
         mSwipe.setColorSchemeColors(CommonUtils.getThemePrimaryColor(mContext));  // 设置下拉刷新组件颜色
     }
 
-    /**
-     * 获取消息
-     *
-     */
-    public void fetchLatestData(int pages) {
+    // 获取最新壁纸数据
+    public void fetchLatestPicData() {
 
-        FetchLatestPicTask.fetch(pages, new FetchLatestPicTask.FetchLatestPicCallback() {
+        FetchLatestPicTask.fetch(new FetchLatestPicTask.FetchLatestPicCallback() {
             @Override
-            public void onSuccess(ArrayList<Wallpaper> latests) {
-                onFetchSuccess(latests);  // 获取数据成功
+            public void onSuccess(ArrayList<Wallpaper> wallpapers) {
+                onFetchSuccess(wallpapers);  // 获取数据成功
             }
 
             @Override
@@ -106,14 +97,14 @@ public class LatestPicFragment extends BaseFragment {
     }
 
     // 获取数据成功
-    private void onFetchSuccess(ArrayList<Wallpaper> latests) {
+    private void onFetchSuccess(ArrayList<Wallpaper> wallpapers) {
 
-        this.mLatests = latests;
+        this.mWallpapers = wallpapers;
 
         if (mAdapter == null) {
             initRecyclerView();  // 初始化RecyclerView
         } else {
-            mAdapter.syncData(mLatests);  // 同步数据
+            mAdapter.syncData(mWallpapers);  // 同步数据
             mAdapter.notifyDataSetChanged();  // 更新数据
         }
         if (mSwipe.isRefreshing()) {
@@ -125,9 +116,7 @@ public class LatestPicFragment extends BaseFragment {
     // 初始化RecyclerView
     private void initRecyclerView() {
 
-        mAdapter = new LatestPicAdapter(mContext, mLatests);
-
-        // final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        mAdapter = new LatestPicAdapter(mContext, mWallpapers);
 
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false);
 
@@ -141,14 +130,7 @@ public class LatestPicFragment extends BaseFragment {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState ==RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 ==mAdapter.getItemCount()) {
-
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                    fetchLatestData(1);  // 获取最新数据
+                    fetchLatestPicData(); // 获取最新数据
 
                 }
             }
@@ -162,7 +144,7 @@ public class LatestPicFragment extends BaseFragment {
         mAdapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(RecyclerView.ViewHolder holder, int position) {
-                PicDetailsActivity.startPicDetailsActivity(getActivity(), mLatests.get(position).getUrl());
+                PicDetailsActivity.startPicDetailsActivity(getActivity(), mWallpapers.get(position).getUrl());
             }
         });
 

@@ -2,19 +2,14 @@ package com.xiezizuocai.puredaily.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.xiezizuocai.puredaily.R;
 import com.xiezizuocai.puredaily.entity.HotSong;
-import com.xiezizuocai.puredaily.entity.LatestInfo;
 
 import java.util.ArrayList;
 
@@ -32,7 +27,6 @@ public class MusicAdapter extends BaseAdapter<MusicAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         super.onBindViewHolder(holder, position);
-
         HotSong song = mSongs.get(position);
 
         String artists = song.getArtists();

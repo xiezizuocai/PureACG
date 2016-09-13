@@ -18,32 +18,14 @@ public class FetchMusicTask {
 
     public interface FetchMusicCallback {
         void onSuccess(ArrayList<HotSong> songs);
-
         void onError(String errorMsg);
     }
 
-    // 获取最新的数据
-    private static void fetch(final FetchMusicCallback fetchCallback) {
-        Request.requestUrl(API.LATEST_MUSIC, CACHE_MAX_AGE, false, new Request.RequestCallback() {
-            @Override
-            public void onSuccess(String result) {
-                parseMusicResult(result, fetchCallback);
-            }
 
-            @Override
-            public void onError(String errorMsg) {
-                fetchCallback.onError(errorMsg);
-            }
-        });
-    }
+    // 获取音乐榜最新数据
+    public static void fetch(final FetchMusicCallback fetchCallback) {
 
-    // 获取某一天的数据
-    public static void fetch(String date, final FetchMusicCallback fetchCallback) {
-        if (date == null) {
-            fetch(fetchCallback);
-            return;
-        }
-        Request.requestUrl(API.LATEST_MUSIC + date, CACHE_MAX_AGE, false, new Request.RequestCallback() {
+        Request.requestUrl(API.LATEST_MUSIC , CACHE_MAX_AGE, false, new Request.RequestCallback() {
             @Override
             public void onSuccess(String result) {
                 parseMusicResult(result, fetchCallback);

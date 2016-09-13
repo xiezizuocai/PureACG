@@ -13,9 +13,8 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-
 import com.xiezizuocai.puredaily.R;
-import com.xiezizuocai.puredaily.ui.fragment.LatestDailyFragment;
+import com.xiezizuocai.puredaily.ui.fragment.LatestInfoFragment;
 import com.xiezizuocai.puredaily.ui.fragment.LatestPicFragment;
 import com.xiezizuocai.puredaily.ui.fragment.MusicFragment;
 import com.xiezizuocai.puredaily.utils.CommonUtils;
@@ -24,7 +23,6 @@ import com.xiezizuocai.puredaily.utils.StatusBarUtils;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
-/************************************ HomeActivity(MainActivity) **********************************/
 
 @ContentView(R.layout.activity_home)
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -50,7 +48,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
             if (savedInstanceState != null) {
                 return;
             }
-            switchFragment(new LatestDailyFragment());
+            switchFragment(new LatestInfoFragment());
         }
 
     }
@@ -122,8 +120,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         switch (item.getItemId()) {
             // 最新资讯
             case R.id.nav_latest_daily: {
-                LatestDailyFragment latestFragment = new LatestDailyFragment();
-                switchFragment(latestFragment);
+                LatestInfoFragment latestInfoFragment = new LatestInfoFragment();
+                switchFragment(latestInfoFragment);
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 break;
             }

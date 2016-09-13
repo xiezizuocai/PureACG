@@ -66,7 +66,7 @@ public class MusicFragment extends BaseFragment {
         View view = super.onCreateView(inflater, container, savedInstanceState);
 
         initSwipe();  // 初始化下拉刷新组件
-        fetchMusic(null);  // 获取最新数据
+        fetchMusicData();  // 获取最新数据
         return view;
     }
 
@@ -74,19 +74,16 @@ public class MusicFragment extends BaseFragment {
         mSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                fetchMusic(null);  // 获取最新数据
+                fetchMusicData();  // 获取最新数据
             }
         });
         mSwipe.setColorSchemeColors(CommonUtils.getThemePrimaryColor(mContext));  // 设置下拉刷新组件颜色
     }
 
-    /**
-     * 获取ACG音乐榜
-     *
-     * @param date 指定日期
-     */
-    private void fetchMusic(String date) {
-        FetchMusicTask.fetch(date, new FetchMusicTask.FetchMusicCallback() {
+
+    // 获取音乐榜数据
+    private void fetchMusicData() {
+        FetchMusicTask.fetch(new FetchMusicTask.FetchMusicCallback() {
             @Override
             public void onSuccess(ArrayList<HotSong> songs) {
                 onFetchSuccess(songs);  // 获取数据成功

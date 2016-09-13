@@ -19,18 +19,12 @@ import java.util.ArrayList;
 
 public class AnimeComicAdapter extends BaseAdapter<AnimeComicAdapter.MyViewHolder> {
 
-    private static final int TYPE_IMAGE_HEADER = 0;  // 轮播图片
-
-    private static final int TYPE_AnimeComic = 1;
-
     private ArrayList<AnimeComic> mAnimeComics;
     private Context mContext;
 
-    private View mAnimeComicHeaderView;
-
     /**
-     * @param context
-     * @param animeComics            动漫集合
+     * @param context  上下文
+     * @param animeComics  动漫集合
      */
     public AnimeComicAdapter(Context context, ArrayList<AnimeComic> animeComics) {
         this.mContext = context;
