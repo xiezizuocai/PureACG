@@ -16,11 +16,15 @@
 
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/3.png)
 
-![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)   
+![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/4.png)
 
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/5.png)
 
 ![](https://github.com/xiezizuocai/PureACG/raw/master/screenshots/6.png)
+
+
+##下载
+https://pan.baidu.com/s/1jI79Nhk
 
 
 ##感谢
