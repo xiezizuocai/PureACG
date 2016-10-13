@@ -10,6 +10,6 @@
     <item
         android:id="@+id/action_click_me"
         android:orderInCategory="100"
-        android:title="点我"
+        android:title="暂无"
         app:showAsAction="never" />
 </menu>

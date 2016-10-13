@@ -70,7 +70,7 @@
                 android:layout_margin="15dp"
                 android:orientation="vertical">
 
-                <com.xiezizuocai.puredaily.widget.TipTitleView
+                <com.xiezizuocai.pureacg.widget.TipTitleView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     app:pure_icon="@drawable/ic_about_change_log"
@@ -84,7 +84,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/version_change_log"/>
 
-                <com.xiezizuocai.puredaily.widget.TipTitleView
+                <com.xiezizuocai.pureacg.widget.TipTitleView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     app:pure_icon="@drawable/ic_about_contact"
@@ -116,7 +116,7 @@
 
                 </RelativeLayout>
 
-                <com.xiezizuocai.puredaily.widget.TipTitleView
+                <com.xiezizuocai.pureacg.widget.TipTitleView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     app:pure_icon="@drawable/ic_about_statement"
@@ -132,7 +132,7 @@
                     android:lineSpacingExtra="10dp"
                     android:text="@string/app_statement"/>
 
-                <com.xiezizuocai.puredaily.widget.TipTitleView
+                <com.xiezizuocai.pureacg.widget.TipTitleView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     app:pure_icon="@drawable/ic_about_thanks"
